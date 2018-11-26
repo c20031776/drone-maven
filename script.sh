@@ -1,18 +1,18 @@
 #!/bin/sh
 #处理环境变量获取及判空逻辑
 #从secrets中获取账号密码
-if [ ! -n "$NEXUS_USERNAME" ] ;then
+if [ ! -n "$PLUGIN_NEXUS_USERNAME" ] ;then
 	echo "you have not input NEXUS_USERNAME"
 	exit 1
 else 
-	USER="$NEXUS_USERNAME"
+	USER="$PLUGIN_NEXUS_USERNAME"
 fi
 
-if [ ! -n "$NEXUS_PASSWORD" ] ;then
+if [ ! -n "$PLUGIN_NEXUS_PASSWORD" ] ;then
 	echo "you have not input NEXUS_PASSWORD"
 	exit 1
 else 
-	PASS="$NEXUS_PASSWORD"
+	PASS="$PLUGIN_NEXUS_PASSWORD"
 fi
 
 if [ ! -n "$PLUGIN_URL" ] ;then
